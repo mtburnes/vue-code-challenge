@@ -26,8 +26,7 @@
   <!-- Vue component styles -->
   <link href="components/adder/adder.css" rel="stylesheet">
   <link href="components/subtracter/subtracter.css" rel="stylesheet">
-  <link href="components/findSum/findSum.css" rel="stylesheet">
-  <link href="components/coder/coder.css" rel="stylesheet">
+  <link href="components/storageCalc/storageCalc.css" rel="stylesheet">`
 
 </head>
 
@@ -80,37 +79,22 @@
 
         <h3 class="mt-2">{{difference}}</h3>
       </article>
-      <article id="findSum" class="col-md-4 ">
-        <p>This one finds the  sum until the specified term!!</p>
+
+      <article id="storageCalc" class="col-md-4 ">
+        <h2>Storage Space Estimator</h2>
+        <p>Given count of items and average size per item, this app will display estimated total space required.</p>
+        
+        <fieldset class="mt-2">
+          <label for="items">Number of files:</label>
+          <input v-model="items" id="items" type="number" min="1">
+        </fieldset>
 
         <fieldset class="mt-2">
-          <label for="number1">Enter number of terms:</label>
-          <input v-model="number1" id="number1" type="number" min="1" max="100">
-          <span id="firstWarning" class="text-danger"></span>
+          <label for="size">Size of files (in kb):</label>
+          <input v-model="size" id="size" type="number" min="1">
         </fieldset>
-     
-        <h3 class="mt-2">{{sumofNumbers}}</h3>
-      </article>
-
-      <article id="coder" class="col-md-4 ">
-        <h2>Encrypt with the Viginere Cipher</h2>
-        <p>This cipher encodes each letter of the original word using the codeword!</p>
-        <p>An a will add one letter, b will add two, and so on.</p>
-        <fieldset class="mt-2">
-          <label for="word">Enter word to encode:</label>
-          <input v-model="word" id="word" type="text">
-        </fieldset>
-        <fieldset class="mt-2">
-          <label for="codeword">Enter codeword:</label>
-          <input v-model="codeword" id="codeword" type="text">
-        </fieldset>
-        <p>Encrypted Word: {{encryptedWord}}</p>
-      </article>
-      
-      <article class="col-md-4 ">
-        <h2>Build tools would help us combine HTML files</h2>
-        <p>It's nice to start without having to add them, so everything goes in this one HTML file. </p>
-        <p>Add your own component! </p>
+        
+        <h3 class="mt-2">{{storageCalc}}</h3>
       </article>
 
       <article class="col-md-4 ">
@@ -156,9 +140,7 @@
 
   <script src="components/adder/adder.js"></script>
   <script src="components/subtracter/subtracter.js"></script>
-  <script src="components/findSum/findSum.js"></script>
-  <script src="components/coder/coder.js"></script>
-
+  <script src="components/storageCalc/storageCalc.js"></script>
 </body>
 
 </html>
