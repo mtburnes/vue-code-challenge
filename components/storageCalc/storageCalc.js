@@ -13,8 +13,9 @@ const storageCalc = new Vue({
       const warning = "The calculated value is an absolute value. Negatives are ignored."
       if(i < 0 || j < 0){
         return `Your total file size is ${Math.abs(mult(i, j))}kb.\n${warning}`
-      }else{
-        return `Your total file size is ${Math.abs(mult(i, j))}kb.
+      }
+      else{
+        return `Your total file size is ${Math.abs(mult(i, j))}kb.`
       }
       
     }
